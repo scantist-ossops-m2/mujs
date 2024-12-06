@@ -70,7 +70,7 @@ void js_ppfile(js_State *J, const char *filename, int minify)
 
 	if (js_try(J)) {
 		js_free(J, s);
-		if (f) fclose(f);
+		fclose(f);
 		js_throw(J);
 	}
 
